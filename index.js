@@ -1,3 +1,40 @@
+class Company{
+    constructor(name, taxId, yearEstablished, taxRate){
+        this.name = name;
+        this.id = taxId;
+        this.year = yearEstablished;
+        this.taxRate = taxRate;
+    }
+}
+
+class Person{
+    constructor(name, ssn, birthYear, taxRate){
+        this.name = name;
+        this.id = ssn;
+        this.year = birthYear;
+        this.taxRate = taxRate;
+    }
+}
+
+class Car{
+    constructor(model, vin, year){
+        this.name = model;
+        this.id = vin;
+        this.year = year;
+    }
+}
+
+class Agable {
+    constructor(year) {
+        this.year = year;
+    }
+
+    age() {
+        return new Date().getFullYear() - this.year;
+    }
+}
+
+
 class Company extends Agable {
     constructor(name, taxId, yearEstablished, taxRate){
         super(yearEstablished);
@@ -21,16 +58,6 @@ class Car extends Agable {
         super(year);
         this.name = model;
         this.id = vin;
-    }
-}
-
-class Agable {
-    constructor(year) {
-        this.year = year;
-    }
-
-    age() {
-        return new Date().getFullYear() - this.year;
     }
 }
 
